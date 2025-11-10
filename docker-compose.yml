@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  gitlab-runner:
+    image: gitlab/gitlab-runner:latest
+    container_name: gitlab-runner
+    ports:
+      - "8989:8989"
+      - "8443:8443"
+    volumes:
+      - /etc/gitlab-runner:/etc/gitlab-runner
+      - /var/lib/gitlab-runner:/var/lib/gitlab-runner
+      - /var/log/gitlab-runner:/var/log/gitlab-runner
+    restart: always
+    environment:
+      GITLAB_URL: "http://192.168.1.50:8929"
+      GITLAB_TOKEN: "glrt-DzbVryFyQAlGDq9eTbPImm86MQpwOjEKdDozCnU6MQ8.01.170aaccge"
