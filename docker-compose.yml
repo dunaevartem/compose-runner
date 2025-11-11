@@ -13,4 +13,5 @@ services:
     restart: always
     environment:
       GITLAB_URL: "http://192.168.1.50:8929"
-      GITLAB_TOKEN: "тут указываем токен который нам выдаст гитлаб при регистрации"
+    env_file:
+      - .env
