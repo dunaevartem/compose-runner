@@ -11,7 +11,5 @@ services:
       - /var/lib/gitlab-runner:/var/lib/gitlab-runner
       - /var/log/gitlab-runner:/var/log/gitlab-runner
     restart: always
-    environment:
-      GITLAB_URL: "http://192.168.1.50:8929"
     env_file:
       - .env
